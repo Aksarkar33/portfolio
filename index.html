@@ -53,6 +53,27 @@
   .navlinks a:hover{color:var(--accent);}
   .navlinks .path{color:var(--warn);}
 
+  /* ---------- PROFILE PHOTO ---------- */
+  .hero-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:28px;
+    margin-bottom:22px;
+  }
+  .hero-copy{min-width:0;}
+  .profile-photo{
+    width:128px;
+    height:128px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:50%;
+    border:2px solid var(--border);
+    background:var(--surface);
+    flex:0 0 auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+  }
+
   /* ---------- HERO / CONSOLE ---------- */
   .hero{padding:64px 0 40px;}
   .eyebrow{
@@ -168,6 +189,9 @@
   footer{padding:32px 0 60px; text-align:center; color:var(--text-dim); font-family:var(--mono); font-size:12px;}
 
   @media(max-width:600px){
+    .hero-top{align-items:flex-start;}
+    .profile-photo{width:92px;height:92px;}
+
     .navlinks{display:none;}
     .console-body{padding:16px;}
     section{padding:40px 0;}
@@ -193,10 +217,15 @@
 
   <!-- HERO -->
   <section class="hero" style="border-top:none;">
-    <div class="eyebrow">status: open to work</div>
-    <h1>Apurba</h1>
-    <div class="role">Backend Developer · Java &amp; Spring Boot</div>
-    <p class="lede">B.Tech graduate (IT) building REST APIs with Spring Boot, Spring Security and PostgreSQL. Based in Kolkata — open to on-site and remote roles.</p>
+    <div class="hero-top">
+      <div class="hero-copy">
+        <div class="eyebrow">status: open to work</div>
+        <h1>Apurba</h1>
+        <div class="role">Backend Developer · Java &amp; Spring Boot</div>
+        <p class="lede">B.Tech graduate (IT) building REST APIs with Spring Boot, Spring Security and PostgreSQL. Based in Kolkata — open to on-site and remote roles.</p>
+      </div>
+      <img class="profile-photo" src="Apurba_Profile.jpg" alt="Apurba Sarkar">
+    </div>
 
     <div class="console">
       <div class="console-bar">
@@ -414,6 +443,9 @@
 <footer>
   built with Spring Boot energy, shipped as static HTML — © 2026 Apurba
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
